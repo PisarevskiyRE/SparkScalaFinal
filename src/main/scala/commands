@@ -1,0 +1,1 @@
+./spark/bin/spark-submit --class com.example.FlightAnalyzer --deploy-mode client --master spark://592e77a8c786:7077 --verbose --supervise /opt/spark-apps/SparkScalaFinal.jar /opt/spark-data/file_path.csv /opt/spark-data/metrics_store.csv

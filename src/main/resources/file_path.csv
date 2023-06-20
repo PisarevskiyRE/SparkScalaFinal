@@ -1,0 +1,5 @@
+name,path
+airlines,src/main/resources/airlines.csv
+airports,src/main/resources/airports.csv
+flights,src/main/resources/flights.csv
+

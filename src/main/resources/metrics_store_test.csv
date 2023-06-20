@@ -1,0 +1,4 @@
+pathAll,dateTo,path,metricName,date,order,dateFrom,top
+src/main/resources/output/FlightsByDayOfWeekAll.csv,2015-12-31 00:00:00.0,src/main/resources/output/FlightsByDayOfWeek.csv,FlightsByDayOfWeek,2023-06-20 00:06:36.016901,desc,2015-01-01 00:00:00.0,10
+src/main/resources/output/DelayReasonsAll.csv,2015-12-31 00:00:00.0,src/main/resources/output/DelayReasons.csv,DelayReasons,2023-06-20 00:07:12.188433,desc,2015-01-01 00:00:00.0,10
+src/main/resources/output/DelayPercentAll.csv,2015-12-31 00:00:00.0,src/main/resources/output/DelayPercent.csv,DelayReasons,2023-06-20 00:07:53.015912,desc,2015-01-01 00:00:00.0,10

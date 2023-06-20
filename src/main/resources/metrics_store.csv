@@ -1,0 +1,7 @@
+metricName,top,order,date,dateFrom,dateTo,path,pathAll
+TopAirportsByFlights,10,desc,2023-01-01,2010-01-01,2011-12-31,src/main/resources/output/TopAirportsByFlights.csv,src/main/resources/output/TopAirportsByFlightsAll.csv
+OnTimeAirlines,10,desc,2023-01-01,2010-01-01,2011-12-31,src/main/resources/output/OnTimeAirlines.csv,src/main/resources/output/OnTimeAirlinesAll.csv
+OnTimeFlights,10,desc,2023-01-01,2010-01-01,2011-12-31,src/main/resources/output/OnTimeFlights.csv,src/main/resources/output/OnTimeFlightsAll.csv
+FlightsByDayOfWeek,10,desc,2023-01-01,2010-01-01,2011-12-31,src/main/resources/output/FlightsByDayOfWeek.csv,src/main/resources/output/FlightsByDayOfWeekAll.csv
+DelayReasons,10,desc,2023-01-01,2010-01-01,2011-12-31,src/main/resources/output/DelayReasons.csv,src/main/resources/output/DelayReasonsAll.csv
+DelayPercent,10,desc,2023-01-01,2010-01-01,2011-12-31,src/main/resources/output/DelayPercent.csv,src/main/resources/output/DelayPercentAll.csv

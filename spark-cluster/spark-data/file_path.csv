@@ -1,0 +1,5 @@
+name,path
+airlines,/opt/spark-data/airlines.csv
+airports,/opt/spark-data/airports.csv
+flights,/opt/spark-data/flights.csv
+
