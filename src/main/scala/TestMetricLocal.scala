@@ -4,6 +4,11 @@ import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 
+
+/*
+  Этого файла по идеи не должно существовать он для локального теста расчета
+ */
+
 object TestMetricLocal extends App{
 
   val spark = SparkSession
@@ -109,8 +114,6 @@ object TestMetricLocal extends App{
   val resultDF = totalDelays.toSeq.zip(delayReasons2).map {
     case (delayMinutes: Long, reason: String) => (reason, (delayMinutes.toDouble / totalDelayMinutes) * 100)
   }.toDF("Причина", "Процент")
-
-  resultDF.show()
 
 
   println("1 - Топ-10 самых популярных аэропортов по количеству совершаемых полетов:")

@@ -118,6 +118,7 @@ class Job(spark: SparkSession, config: JobConfig) {
     CsvWriterSingleFile.write(DelayPercentResult._1, DelayPercentResult._3.pathAll)
     CsvWriterSingleFile.write(DelayPercentResult._2, DelayPercentResult._3.path)
 
+
     // собираем все новые настройки
     val newMetrciStore: DataFrame = List(
       TopAirportsByFlights._3,
@@ -129,7 +130,7 @@ class Job(spark: SparkSession, config: JobConfig) {
     ).toDF()
 
 
-    CsvWriterSingleFile.write(newMetrciStore, "/opt/spark-data/output/metrics_store_test.csv")
+    CsvWriterSingleFile.write(newMetrciStore, "src/main/resources/metrics_store_test.csv")
 
   }
 }
