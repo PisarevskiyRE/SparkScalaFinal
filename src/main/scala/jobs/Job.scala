@@ -45,30 +45,39 @@ class Job(spark: SparkSession, config: JobConfig) {
       CsvReader.Config(file = airlinesFilePath)
     ).read()
 
+    println(1)
+
     val airportsDF = CsvReader(
       spark,
       CsvReader.Config(file = airportsFilePath)
     ).read()
-
+    println(2)
     val flightsDF   = CsvReader(
       spark,
       CsvReader.Config(file = flightsFilePath)
     ).read()
+    println(3)
 
 
     // загружаем все настройки метрик
+    println(config.storePath)
     val initMetricStore: Dataset[MetricStore] = MetricStore.getInitStore(config.storePath)
-
+    println(4)
 
 
     // 1
     val topAirportsByFlightsMetricStore: MetricStore = getMetricStoreByName(initMetricStore, "TopAirportsByFlights")
+    println(5)
     val TopAirportsByFlights = metrics.TopAirportsByFlights(flightsDF, airportsDF, airlinesDF, topAirportsByFlightsMetricStore).calculate()
+    println(6)
 //    TopAirportsByFlights._1.show()
 //    TopAirportsByFlights._2.show()
 //    println(TopAirportsByFlights._3)
     CsvWriterSingleFile.write(TopAirportsByFlights._1, TopAirportsByFlights._3.pathAll)
+    println(7)
     CsvWriterSingleFile.write(TopAirportsByFlights._2, TopAirportsByFlights._3.path)
+
+    println(8)
 
     // 2
     val OnTimeAirlinesMetricStore: MetricStore = getMetricStoreByName(initMetricStore, "OnTimeAirlines")

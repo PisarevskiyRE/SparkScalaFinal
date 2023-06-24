@@ -22,10 +22,10 @@ object FlightAnalyzer  extends SessionWrapper {
       WriteConfig(
         outputFile = "тест",
         format = "Csv"),
-      "src/main/resources/file_path.csv",
-      //args(0),
-      "src/main/resources/metrics_store.csv"
-      //args(1)
+      //"src/main/resources/file_path.csv",
+      args(0),
+      //"src/main/resources/metrics_store.csv"
+      args(1)
       )
   )
   job.run()
