@@ -4,7 +4,7 @@ import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
 
-object Simple extends App{
+object TestMetricLocal extends App{
 
   val spark = SparkSession
     .builder()

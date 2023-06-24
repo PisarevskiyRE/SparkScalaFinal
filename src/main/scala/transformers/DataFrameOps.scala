@@ -1,8 +1,8 @@
 package com.example
 package transformers
-import other.MetricStore
 
 import com.example.jobs.SessionWrapper
+import com.example.metrics.MetricStore
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions._
 

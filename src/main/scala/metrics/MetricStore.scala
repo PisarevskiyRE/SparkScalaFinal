@@ -1,13 +1,13 @@
 package com.example
-package other
+package metrics
 
-import com.example.jobs.SessionWrapper
-import com.example.readers.CsvReader
+import jobs.SessionWrapper
+import readers.CsvReader
+
 import org.apache.spark.sql.Dataset
 import org.apache.spark.sql.functions.col
 
-
-import java.sql.{Date, Timestamp}
+import java.sql.Timestamp
 
 case class MetricStore(
                         metricName: String,
@@ -27,7 +27,6 @@ object MetricStore extends SessionWrapper{
     spark,
     CsvReader.Config(file = storePath, inferSchema = true)
   ).read().as[MetricStore]
-
 
   def getMetricStoreByName(ds: Dataset[MetricStore], name: String): MetricStore = {
     ds.filter(col("metricName") === name).first()

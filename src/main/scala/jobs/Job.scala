@@ -4,10 +4,9 @@ package jobs
 import jobs.JobConfig.getPathByName
 import metrics._
 import readers.CsvReader
-import other.MetricStore
 
 import com.example.metrics
-import com.example.other.MetricStore.getMetricStoreByName
+import MetricStore.getMetricStoreByName
 import com.example.transformers.DataFrameOps
 import com.example.writers.CsvWriterSingleFile
 import org.apache.spark.sql.{DataFrame, Dataset, SparkSession, functions}
