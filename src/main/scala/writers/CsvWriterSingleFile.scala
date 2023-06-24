@@ -51,6 +51,8 @@ object CsvWriterSingleFile extends DataFrameWriter{
 
     val rowList: List[Map[String, String]] = dataframeToList(df)
 
+
+
     saveListToCsv(rowList, outputPath)
   }
 }

@@ -2,7 +2,7 @@ package com.example
 package metrics
 
 import com.example.jobs.SessionWrapper
-import com.example.other.DfValidator
+import com.example.schemas.DfValidator
 import org.apache.spark.sql.DataFrame
 
 trait Metric extends SessionWrapper with DfValidator {

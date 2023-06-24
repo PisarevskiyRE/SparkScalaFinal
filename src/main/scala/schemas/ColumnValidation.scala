@@ -1,5 +1,5 @@
 package com.example
-package other
+package schemas
 
 import org.apache.spark.sql.DataFrame
 
