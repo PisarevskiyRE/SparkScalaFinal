@@ -1,1 +1,14 @@
-./spark/bin/spark-submit --class com.example.FlightAnalyzer --deploy-mode client --master spark://592e77a8c786:7077 --verbose --supervise /opt/spark-apps/SparkScalaFinal.jar /opt/spark-data/file_path.csv /opt/spark-data/metrics_store.csv
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+
+docker build -t spark-base:latest ./docker-images/base
+docker build -t spark-master:latest ./docker-images/spark-master
+docker build -t spark-worker:latest ./docker-images/spark-worker
+docker build -t spark-submit:latest ./docker-images/spark-submit
+
+docker-compose up --scale spark-worker=3
+
+docker exec -it spark-cluster-spark-master-1 bash
+
+
+./spark/bin/spark-submit --class com.example.FlightAnalyzer --deploy-mode client --master spark://45652a5922ec:7077 --verbose --supervise /opt/spark-apps/SparkScalaFinal.jar /opt/spark-data/file_path.csv /opt/spark-data/metrics_store.csv
