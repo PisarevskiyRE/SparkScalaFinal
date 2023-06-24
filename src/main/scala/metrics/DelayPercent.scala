@@ -60,11 +60,11 @@ class DelayPercent(flights: DataFrame,
 
     newMetrciStore = MetricStore(
       metricName = "DelayPercent",
-      top = 10,
+      top = 10.toString,
       order = curretnMetrciStore.order,
-      date = Timestamp.valueOf(LocalDateTime.now()),
-      dateFrom = fromDate,
-      dateTo = toDate,
+      date = Timestamp.valueOf(LocalDateTime.now()).toString,
+      dateFrom = fromDate.toString,
+      dateTo = toDate.toString,
       path = curretnMetrciStore.path,
       pathAll = curretnMetrciStore.pathAll)
 
@@ -94,7 +94,7 @@ class DelayPercent(flights: DataFrame,
     metric.createOrReplaceTempView("tempView")
 
     spark.sql(s" select Reason, Percent from tempView order by Percent ${curretnMetrciStore.order}")
-      .limit(curretnMetrciStore.top)
+      .limit(curretnMetrciStore.top.toInt)
   }
 
   def calculate(): (DataFrame, DataFrame, MetricStore) = {

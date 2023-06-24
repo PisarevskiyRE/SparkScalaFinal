@@ -52,11 +52,11 @@ class DelayReasons(flights: DataFrame,
 
     newMetrciStore = MetricStore(
       metricName = "DelayReasons",
-      top = 10,
+      top = 10.toString,
       order = curretnMetrciStore.order,
-      date = Timestamp.valueOf(LocalDateTime.now()),
-      dateFrom = fromDate,
-      dateTo = toDate,
+      date = Timestamp.valueOf(LocalDateTime.now()).toString,
+      dateFrom = fromDate.toString,
+      dateTo = toDate.toString,
       path = curretnMetrciStore.path,
       pathAll = curretnMetrciStore.pathAll)
 
@@ -86,7 +86,7 @@ class DelayReasons(flights: DataFrame,
     metric.createOrReplaceTempView("tempView")
 
     spark.sql(s" select Reason, count from tempView order by count ${curretnMetrciStore.order}")
-      .limit(curretnMetrciStore.top)
+      .limit(curretnMetrciStore.top.toInt)
   }
 
   def calculate(): (DataFrame, DataFrame, MetricStore) = {

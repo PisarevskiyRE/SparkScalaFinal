@@ -55,11 +55,11 @@ class TopAirportsByFlights(flights: DataFrame,
 
     newMetrciStore = MetricStore(
       metricName = "TopAirportsByFlights",
-      top = 10,
-      order = curretnMetrciStore.order,
-      date = Timestamp.valueOf(LocalDateTime.now()),
-      dateFrom = fromDate,
-      dateTo = toDate,
+      top = 10.toString,
+      order = curretnMetrciStore.order.toString,
+      date = Timestamp.valueOf(LocalDateTime.now()).toString,
+      dateFrom = fromDate.toString,
+      dateTo = toDate.toString,
       path = curretnMetrciStore.path,
       pathAll = curretnMetrciStore.pathAll)
 
@@ -92,7 +92,7 @@ class TopAirportsByFlights(flights: DataFrame,
     metric.createOrReplaceTempView("tempView")
 
     spark.sql(s" select AIRPORT, count from tempView order by count ${curretnMetrciStore.order}")
-            .limit(curretnMetrciStore.top)
+            .limit(curretnMetrciStore.top.toInt)
   }
 
 

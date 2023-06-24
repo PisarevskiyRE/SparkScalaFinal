@@ -45,11 +45,11 @@ class FlightsByDayOfWeek(flights: DataFrame,
 
     newMetrciStore = MetricStore(
       metricName = "FlightsByDayOfWeek",
-      top = 10,
+      top = 10.toString,
       order = curretnMetrciStore.order,
-      date = Timestamp.valueOf(LocalDateTime.now()),
-      dateFrom = fromDate,
-      dateTo = toDate,
+      date = Timestamp.valueOf(LocalDateTime.now()).toString,
+      dateFrom = fromDate.toString,
+      dateTo = toDate.toString,
       path = curretnMetrciStore.path,
       pathAll = curretnMetrciStore.pathAll)
 
@@ -79,7 +79,7 @@ class FlightsByDayOfWeek(flights: DataFrame,
     metric.createOrReplaceTempView("tempView")
 
     spark.sql(s" select DAY_OF_WEEK, average_delay from tempView order by average_delay ${curretnMetrciStore.order}")
-      .limit(curretnMetrciStore.top)
+      .limit(curretnMetrciStore.top.toInt)
   }
 
   def calculate(): (DataFrame, DataFrame, MetricStore) = {

@@ -69,11 +69,11 @@ class OnTimeFlights(flights: DataFrame,
 
     newMetrciStore = MetricStore(
       metricName = "OnTimeFlights",
-      top = 10,
+      top = 10.toString,
       order = curretnMetrciStore.order,
-      date = Timestamp.valueOf(LocalDateTime.now()),
-      dateFrom = fromDate,
-      dateTo = toDate,
+      date = Timestamp.valueOf(LocalDateTime.now()).toString,
+      dateFrom = fromDate.toString,
+      dateTo = toDate.toString,
       path = curretnMetrciStore.path,
       pathAll = curretnMetrciStore.pathAll)
 
@@ -109,7 +109,7 @@ class OnTimeFlights(flights: DataFrame,
     metric.createOrReplaceTempView("tempView")
 
     spark.sql(s" select ORIGIN_AIRPORT, AIRLINE, DESTINATION_AIRPORT, rank1, rank2 from tempView order by rank1 ${curretnMetrciStore.order}, rank2 ${curretnMetrciStore.order}")
-            .limit(curretnMetrciStore.top)
+            .limit(curretnMetrciStore.top.toInt)
   }
 
 

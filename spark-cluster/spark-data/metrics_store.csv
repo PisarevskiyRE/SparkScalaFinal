@@ -1,7 +1,7 @@
 metricName,top,order,date,dateFrom,dateTo,path,pathAll
-TopAirportsByFlights,10,desc,2023-01-01,2010-01-01,2011-12-31,/opt/spark-data/output/TopAirportsByFlights.csv,/opt/spark-data/output/TopAirportsByFlightsAll.csv
-OnTimeAirlines,10,desc,2023-01-01,2010-01-01,2011-12-31,/opt/spark-data/output/OnTimeAirlines.csv,/opt/spark-data/output/OnTimeAirlinesAll.csv
-OnTimeFlights,10,desc,2023-01-01,2010-01-01,2011-12-31,/opt/spark-data/output/OnTimeFlights.csv,/opt/spark-data/output/OnTimeFlightsAll.csv
-FlightsByDayOfWeek,10,desc,2023-01-01,2010-01-01,2011-12-31,/opt/spark-data/output/FlightsByDayOfWeek.csv,/opt/spark-data/output/FlightsByDayOfWeekAll.csv
-DelayReasons,10,desc,2023-01-01,2010-01-01,2011-12-31,/opt/spark-data/output/DelayReasons.csv,/opt/spark-data/output/DelayReasonsAll.csv
-DelayPercent,10,desc,2023-01-01,2010-01-01,2011-12-31,/opt/spark-data/output/DelayPercent.csv,/opt/spark-data/output/DelayPercentAll.csv
+TopAirportsByFlights,10,desc,2023-01-01 00:00:01,2010-01-01 00:00:01,2011-12-31 00:00:01,/opt/spark-data/output/TopAirportsByFlights.csv,/opt/spark-data/output/TopAirportsByFlightsAll.csv
+OnTimeAirlines,10,desc,2023-01-01 00:00:01,2010-01-01 00:00:01,2011-12-31 00:00:01,/opt/spark-data/output/OnTimeAirlines.csv,/opt/spark-data/output/OnTimeAirlinesAll.csv
+OnTimeFlights,10,desc,2023-01-01 00:00:01,2010-01-01 00:00:01,2011-12-31 00:00:01,/opt/spark-data/output/OnTimeFlights.csv,/opt/spark-data/output/OnTimeFlightsAll.csv
+FlightsByDayOfWeek,10,desc,2023-01-01 00:00:01,2010-01-01 00:00:01,2011-12-31 00:00:01,/opt/spark-data/output/FlightsByDayOfWeek.csv,/opt/spark-data/output/FlightsByDayOfWeekAll.csv
+DelayReasons,10,desc,2023-01-01 00:00:01,2010-01-01 00:00:01,2011-12-31 00:00:01,/opt/spark-data/output/DelayReasons.csv,/opt/spark-data/output/DelayReasonsAll.csv
+DelayPercent,10,desc,2023-01-01 00:00:01,2010-01-01 00:00:01,2011-12-31 00:00:01,/opt/spark-data/output/DelayPercent.csv,/opt/spark-data/output/DelayPercentAll.csv

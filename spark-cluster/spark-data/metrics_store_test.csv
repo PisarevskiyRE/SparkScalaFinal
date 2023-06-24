@@ -1,0 +1,7 @@
+pathAll,dateTo,path,metricName,date,order,dateFrom,top
+/opt/spark-data/output/TopAirportsByFlightsAll.csv,2015-01-01 00:00:00.0,/opt/spark-data/output/TopAirportsByFlights.csv,TopAirportsByFlights,2023-06-24 23:28:48.755922,desc,2015-01-01 00:00:00.0,10
+/opt/spark-data/output/OnTimeAirlinesAll.csv,2015-01-01 00:00:00.0,/opt/spark-data/output/OnTimeAirlines.csv,OnTimeAirlines,2023-06-24 23:28:50.118672,desc,2015-01-01 00:00:00.0,10
+/opt/spark-data/output/OnTimeFlightsAll.csv,2015-01-01 00:00:00.0,/opt/spark-data/output/OnTimeFlights.csv,OnTimeFlights,2023-06-24 23:28:50.838893,desc,2015-01-01 00:00:00.0,10
+/opt/spark-data/output/FlightsByDayOfWeekAll.csv,2015-01-01 00:00:00.0,/opt/spark-data/output/FlightsByDayOfWeek.csv,FlightsByDayOfWeek,2023-06-24 23:28:52.18627,desc,2015-01-01 00:00:00.0,10
+/opt/spark-data/output/DelayReasonsAll.csv,2015-01-01 00:00:00.0,/opt/spark-data/output/DelayReasons.csv,DelayReasons,2023-06-24 23:28:52.775877,desc,2015-01-01 00:00:00.0,10
+/opt/spark-data/output/DelayPercentAll.csv,2015-01-01 00:00:00.0,/opt/spark-data/output/DelayPercent.csv,DelayReasons,2023-06-24 23:28:53.370016,desc,2015-01-01 00:00:00.0,10

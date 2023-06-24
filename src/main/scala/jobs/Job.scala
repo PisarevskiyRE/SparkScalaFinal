@@ -139,7 +139,7 @@ class Job(spark: SparkSession, config: JobConfig) {
     ).toDF()
 
 
-    CsvWriterSingleFile.write(newMetrciStore, "src/main/resources/metrics_store_test.csv")
+    CsvWriterSingleFile.write(newMetrciStore, "/opt/spark-data/metrics_store_test.csv")
 
   }
 }
